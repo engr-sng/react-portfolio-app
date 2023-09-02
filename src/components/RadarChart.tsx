@@ -24,7 +24,7 @@ ChartJS.register(
     Legend
 );
 
-const Skill: React.FC<SkillProps> = ({ options, data }) => {
+const RadarChart: React.FC<SkillProps> = ({ options, data }) => {
     return(
         <>
             <Radar options={options} data={data} />
@@ -32,7 +32,7 @@ const Skill: React.FC<SkillProps> = ({ options, data }) => {
     );
 };
 
-export default Skill;
+export default RadarChart;
 
 
 
