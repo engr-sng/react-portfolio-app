@@ -9,17 +9,17 @@ const ProductionList: React.FC = () => {
     const setMediaList = [
         {
             'title': 'タイトル1',
-            'discription': "タイトル1の説明が入ります。",
+            'description': "タイトル1の説明が入ります。",
             'image': "/images/production/production-001.png",
         },
         {
             'title': 'タイトル2',
-            'discription': "タイトル3の説明が入ります。",
+            'description': "タイトル3の説明が入ります。",
             'image': "/images/production/production-002.png",
         },
         {
             'title': 'タイトル3',
-            'discription': "タイトル3の説明が入ります。",
+            'description': "タイトル3の説明が入ります。",
             'image': "/images/production/production-003.png",
         }
     ];
@@ -36,7 +36,7 @@ const ProductionList: React.FC = () => {
                     return (
                         <Grid item xs={12} md={4}>
                             <Box sx={{ width: "100%" }}>
-                                <MediaList title={data.title} discription={data.discription} image={data.image} />
+                                <MediaList title={data.title} description={data.description} image={data.image} />
                             </Box>
                         </Grid>
                     );

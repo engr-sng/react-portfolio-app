@@ -8,10 +8,10 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 interface MediaCardProps {
   image: string;
   title: string;
-  discription: string;
+  description: string;
 }
 
-const MediaCard: React.FC<MediaCardProps> = ({ image, title, discription }) => {
+const MediaCard: React.FC<MediaCardProps> = ({ image, title, description }) => {
   return (
     <Card>
       <CardActionArea>
@@ -26,7 +26,7 @@ const MediaCard: React.FC<MediaCardProps> = ({ image, title, discription }) => {
             {title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {discription}
+            {description}
           </Typography>
         </CardContent>
       </CardActionArea>
