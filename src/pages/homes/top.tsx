@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 import MV from "../../assets/images/mv.jpg"
 import SkillList from "../../components/SkillList"
 import ProductionList from "../../components/ProductionList"
+import ProfileList from "../../components/ProfileList";
 
 const Top: React.FC = () => {
     return(
@@ -43,24 +44,7 @@ const Top: React.FC = () => {
             </Box>
             <Box>
                 <Container maxWidth='md'>
-                    <Grid container rowSpacing={2} columnSpacing={2}>
-                        <Grid item xs={12} md={12} sx={{ textAlign: 'center' }}>
-                            <Typography component="h2" variant="h2">
-                                Profile
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <Box sx={{ height: 200, backgroundColor: 'red' }}></Box>
-                        </Grid>
-                        <Grid item xs={12} md={8}>
-                            <Box sx={{ height: 200, backgroundColor: 'red' }}></Box>
-                        </Grid>
-                        <Grid item xs={12} md={12} sx={{ textAlign: 'center' }}>
-                            <Button variant="contained" size="large">
-                                LearnMore
-                            </Button>
-                        </Grid>
-                    </Grid>
+                    <ProfileList />
                 </Container>
             </Box>
             <Box>
