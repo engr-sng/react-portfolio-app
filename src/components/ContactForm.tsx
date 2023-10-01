@@ -6,14 +6,13 @@ import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import CircularProgress from "@mui/material/CircularProgress";
+import axios from "axios";
 
 const ContactForm: React.FC = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [emailSent, setEmailSent] = useState(false);
     const [isSending, setIsSending] = useState(false);
-
-    const sleep = (waitTime: number) => new Promise( resolve => setTimeout(resolve, waitTime));
 
     const handleEmailchange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(event.target.value);
@@ -29,7 +28,10 @@ const ContactForm: React.FC = () => {
         try {
             setIsSending(true);
             // 送信する処理
-            await sleep(5000);
+            await axios.post('http://localhost:3001/send-mail', {
+                email: email,
+                message: message,
+            })
             console.log("メールが送信されました。")
             // メール送信が終わったあと
             setEmailSent(true);
