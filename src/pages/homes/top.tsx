@@ -11,6 +11,16 @@ import ProductionList from "../../components/ProductionList"
 import ProfileList from "../../components/ProfileList";
 import ContactForm from "../../components/ContactForm";
 
+const styles = {
+    boxContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: '60px 0',
+    },
+};
+
 const Top: React.FC = () => {
     return(
         <>
@@ -33,22 +43,22 @@ const Top: React.FC = () => {
                     LearnMore
                 </Button>
             </Box>
-            <Box>
+            <Box sx={styles.boxContainer}>
                 <Container maxWidth='md'>
                     <SkillList />
                 </Container>
             </Box>
-            <Box>
+            <Box sx={styles.boxContainer}>
                 <Container maxWidth='md'>
                     <ProductionList />
                 </Container>
             </Box>
-            <Box>
+            <Box sx={styles.boxContainer}>
                 <Container maxWidth='md'>
                     <ProfileList />
                 </Container>
             </Box>
-            <Box>
+            <Box sx={styles.boxContainer}>
                 <Container maxWidth='md'>
                     <ContactForm />
                 </Container>
